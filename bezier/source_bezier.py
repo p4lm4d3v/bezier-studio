@@ -47,11 +47,11 @@ class SourceBezier:
             lerp(self.a2_point(t).y, self.a3_point(t).y, t)
         )
 
-    def bezier_point(self, t: float) -> Point:
+    def bezier_point(self, t: float, r: float) -> Point:
         return Point(
             lerp(self.b1_point(t).x, self.b2_point(t).x, t),
             lerp(self.b1_point(t).y, self.b2_point(t).y, t),
-            r=1
+            r=r
         )
 
     # Lines

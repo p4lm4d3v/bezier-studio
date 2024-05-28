@@ -13,7 +13,7 @@ class DefaultBezier(SourceBezier):
         n: int = 1000
         for t in range(0, n):
             t /= n
-            c: Point = self.bezier_point(t)
+            c: Point = self.bezier_point(t, 1)
             c.draw(surface, BLACK)
 
         # [Start - Control 1] & [End - Control 2] Lines

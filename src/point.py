@@ -4,7 +4,7 @@ import pygame
 
 
 class Point:
-    def __init__(self, x: float, y: float, r: int = 10):
+    def __init__(self, x: float, y: float, r: int = 5):
         self.x = x
         self.y = y
         self.r = r

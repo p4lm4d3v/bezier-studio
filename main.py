@@ -194,7 +194,7 @@ while running:
             BLACK,
             WHITE,
             START_MENU_BUTTON_X,
-            START_MENU_BUTTON_Y + DEBUG_BEZIER_X_OFFSET,
+            START_MENU_BUTTON_Y + DEFAULT_BEZIER_X_OFFSET,
             START_MENU_BUTTON_WIDTH,
             START_MENU_BUTTON_HEIGHT,
             "Bezier"
@@ -204,19 +204,9 @@ while running:
             BLACK,
             WHITE,
             START_MENU_BUTTON_X,
-            START_MENU_BUTTON_Y + DEFAULT_BEZIER_X_OFFSET,
+            START_MENU_BUTTON_Y + DEBUG_BEZIER_X_OFFSET,
             START_MENU_BUTTON_WIDTH, START_MENU_BUTTON_HEIGHT,
             "Bezier Debug"
-        )
-        draw_button(
-            screen,
-            BLACK,
-            WHITE,
-            START_MENU_BUTTON_X,
-            START_MENU_BUTTON_Y + DEBUG_BEZIER_X_OFFSET,
-            START_MENU_BUTTON_WIDTH,
-            START_MENU_BUTTON_HEIGHT,
-            "Bezier"
         )
     elif current_screen == "bezier":
 

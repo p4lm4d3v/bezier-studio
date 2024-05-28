@@ -36,4 +36,4 @@ class DebugBezier(SourceBezier):
         # [b2] Point
         self.b2_point(t).draw(surface, BLUE)
         # [c1] Point
-        self.bezier_point(t).draw(surface, BLACK)
+        self.bezier_point(t, 5).draw(surface, BLACK)
