@@ -4,7 +4,7 @@
 
 # Description
 
-  - Currently just a small showcase of what a [Bezier Curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) is and how it't constructed
+  - Currently just a small showcase of what a [Bezier Curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) is and how it's constructed
 
 # Future
 
