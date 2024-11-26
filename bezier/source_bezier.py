@@ -1,6 +1,6 @@
-from src.colors import BLACK
-from src.point import Point
-from src.lerp import lerp
+from lib.colors import BLACK
+from lib.point import Point
+from lib.lerp import lerp
 
 from pygame import Surface
 import pygame
@@ -59,8 +59,8 @@ class SourceBezier:
         """START TO CONTROL 1 LINE"""
         pygame.draw.line(
             surface,
-            start_pos=self.start.tuple(),
-            end_pos=self.control1.tuple(),
+            start_pos=self.start.pos(),
+            end_pos=self.control1.pos(),
             color=BLACK
         )
 
@@ -68,8 +68,8 @@ class SourceBezier:
         """END TO CONTROL 2 LINE"""
         pygame.draw.line(
             surface,
-            start_pos=self.end.tuple(),
-            end_pos=self.control2.tuple(),
+            start_pos=self.end.pos(),
+            end_pos=self.control2.pos(),
             color=BLACK
         )
 
@@ -77,8 +77,8 @@ class SourceBezier:
         """CONTROL 1 TO CONTROL 2 LINE"""
         pygame.draw.line(
             surface,
-            start_pos=self.control1.tuple(),
-            end_pos=self.control2.tuple(),
+            start_pos=self.control1.pos(),
+            end_pos=self.control2.pos(),
             color=BLACK
         )
 
@@ -86,8 +86,8 @@ class SourceBezier:
         """A1 TO A2 LINE"""
         pygame.draw.line(
             surface,
-            start_pos=self.a1_point(t).tuple(),
-            end_pos=self.a2_point(t).tuple(),
+            start_pos=self.a1_point(t).pos(),
+            end_pos=self.a2_point(t).pos(),
             color=BLACK
         )
 
@@ -95,8 +95,8 @@ class SourceBezier:
         """A2 TO A3 LINE"""
         pygame.draw.line(
             surface,
-            start_pos=self.a2_point(t).tuple(),
-            end_pos=self.a3_point(t).tuple(),
+            start_pos=self.a2_point(t).pos(),
+            end_pos=self.a3_point(t).pos(),
             color=BLACK
         )
 
@@ -104,7 +104,7 @@ class SourceBezier:
         """B1 TO B2 LINE"""
         pygame.draw.line(
             surface,
-            start_pos=self.b1_point(t).tuple(),
-            end_pos=self.b2_point(t).tuple(),
+            start_pos=self.b1_point(t).pos(),
+            end_pos=self.b2_point(t).pos(),
             color=BLACK
         )

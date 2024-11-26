@@ -1,8 +1,8 @@
-from src.colors import GREEN, RED, WHITE, BLACK
+from lib.colors import GREEN, RED, WHITE, BLACK
 from bezier.default_bezier import DefaultBezier
 from bezier.debug_bezier import DebugBezier
-from src.point import Point
-from src.clamp import clamp
+from lib.point import Point
+from lib.clamp import clamp
 
 from pygame import Surface
 import pygame
@@ -129,13 +129,13 @@ while running:
                             control1=Point(3 / 8 * WIDTH, 1 / 6 * HEIGHT),
                             control2=Point(5 / 8 * WIDTH, 1 / 6 * HEIGHT),
                         )
-                    elif check_in_circle(mouse_pos, default_bezier.start.tuple(), r):
+                    elif check_in_circle(mouse_pos, default_bezier.start.pos(), r):
                         dragging_start = True
-                    elif check_in_circle(mouse_pos, default_bezier.control1.tuple(), r):
+                    elif check_in_circle(mouse_pos, default_bezier.control1.pos(), r):
                         dragging_control1 = True
-                    elif check_in_circle(mouse_pos, default_bezier.control2.tuple(), r):
+                    elif check_in_circle(mouse_pos, default_bezier.control2.pos(), r):
                         dragging_control2 = True
-                    elif check_in_circle(mouse_pos, default_bezier.end.tuple(), r):
+                    elif check_in_circle(mouse_pos, default_bezier.end.pos(), r):
                         dragging_end = True
 
         elif event.type == pygame.MOUSEBUTTONUP:
@@ -197,7 +197,7 @@ while running:
             START_MENU_BUTTON_Y + DEFAULT_BEZIER_X_OFFSET,
             START_MENU_BUTTON_WIDTH,
             START_MENU_BUTTON_HEIGHT,
-            "Bezier"
+            "Interactive"
         )
         draw_button(
             screen,
@@ -206,7 +206,7 @@ while running:
             START_MENU_BUTTON_X,
             START_MENU_BUTTON_Y + DEBUG_BEZIER_X_OFFSET,
             START_MENU_BUTTON_WIDTH, START_MENU_BUTTON_HEIGHT,
-            "Bezier Debug"
+            "Preview"
         )
     elif current_screen == "bezier":
 

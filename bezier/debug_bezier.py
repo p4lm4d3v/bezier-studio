@@ -1,6 +1,6 @@
-from src.colors import RED, GREEN, BLUE, BLACK
-from src.point import Point
-from src.lerp import lerp
+from lib.colors import RED, GREEN, BLUE, BLACK
+from lib.point import Point
+from lib.lerp import lerp
 from bezier.source_bezier import SourceBezier
 
 from pygame import Surface
